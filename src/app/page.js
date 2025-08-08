@@ -20,7 +20,7 @@ const page = () => {
       <OurServices />
       <Destinations />
       <FAQ />
-      {/* <Contact /> */}
+      <Contact />
       <Slider />
       <Footer />
     </div>
