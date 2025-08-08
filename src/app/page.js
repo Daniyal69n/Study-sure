@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import FAQ from '@/components/Faq';
 import Slider from '@/components/Slider';
 import Contact from '@/components/Contact';
+import Widget from '@/components/Widget';
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       <Navbar />
       <Hero />
       <VisaCategories />
+      <Widget />
       <WhyUs />
       <OurServices />
       <Destinations />
