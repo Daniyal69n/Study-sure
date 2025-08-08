@@ -8,6 +8,7 @@ import Destinations from '../components/Destinations';
 import Footer from '../components/Footer';
 import FAQ from '@/components/Faq';
 import Slider from '@/components/Slider';
+import Contact from '@/components/Contact';
 
 const page = () => {
   return (
@@ -19,6 +20,7 @@ const page = () => {
       <OurServices />
       <Destinations />
       <FAQ />
+      {/* <Contact /> */}
       <Slider />
       <Footer />
     </div>
