@@ -19,18 +19,24 @@ const Hero = () => {
                 letterSpacing: 'normal'
               }}
             >
-              Visa Made Easy
+              Making Your Study
               <br />
-              Dreams Made
+              Abroad Dreams 
               <br />
               Possible
             </h1>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2">
                 Read More
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
-              <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                </svg>
                 Watch Videos
               </button>
             </div>

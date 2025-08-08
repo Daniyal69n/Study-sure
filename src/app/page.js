@@ -1,6 +1,9 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import VisaCategories from '../components/VisaCategories';
+import WhyUs from '../components/WhyUs';
+import OurServices from '../components/OurServices';
 import FeatureCards from '../components/FeatureCards';
 import ServiceCards from '../components/ServiceCards';
 import StatsSection from '../components/StatsSection';
@@ -13,6 +16,9 @@ const page = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <VisaCategories />
+      <WhyUs />
+      <OurServices />
       <FeatureCards />
       <ServiceCards />
       <StatsSection />
