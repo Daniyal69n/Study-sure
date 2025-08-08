@@ -39,21 +39,21 @@ const Hero = () => {
           {/* All Images Absolutely Positioned at Bottom */}
           {/* Circle at bottom right */}
           <img 
-            src="/hero/circle.png" 
+            src="/Hero/circle.png" 
             alt="Circle" 
             className="absolute -bottom-[200px] right-[20vw] w-[600px] z-10"
           />
           
           {/* Tower above circle */}
           <img 
-            src="/hero/tower.png" 
+            src="/Hero/tower.png" 
             alt="Tower" 
             className="absolute bottom-28 right-[16vw] w-[400px] z-20"
           />
           
           {/* Person at the very top */}
           <img 
-            src="/hero/person.png" 
+            src="/Hero/person.png" 
             alt="Person" 
             className="absolute bottom-0 right-[24vw] w-[500px] z-30"
           />
