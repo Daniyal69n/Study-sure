@@ -4,12 +4,10 @@ import Hero from '../components/Hero';
 import VisaCategories from '../components/VisaCategories';
 import WhyUs from '../components/WhyUs';
 import OurServices from '../components/OurServices';
-import FeatureCards from '../components/FeatureCards';
-import ServiceCards from '../components/ServiceCards';
-import StatsSection from '../components/StatsSection';
-import TestimonialCards from '../components/TestimonialCards';
-import CTASection from '../components/CTASection';
+import Destinations from '../components/Destinations';
 import Footer from '../components/Footer';
+import FAQ from '@/components/Faq';
+import Slider from '@/components/Slider';
 
 const page = () => {
   return (
@@ -19,11 +17,9 @@ const page = () => {
       <VisaCategories />
       <WhyUs />
       <OurServices />
-      <FeatureCards />
-      <ServiceCards />
-      <StatsSection />
-      <TestimonialCards />
-      <CTASection />
+      <Destinations />
+      <FAQ />
+      <Slider />
       <Footer />
     </div>
   );
