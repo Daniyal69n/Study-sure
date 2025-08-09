@@ -91,10 +91,7 @@ const VisaCategories = () => {
 
               {/* Button */}
               <button 
-                className="flex items-center space-x-2 px-6 py-3 rounded-full font-semibold text-white transition-colors duration-200"
-                style={{ backgroundColor: '#034833' }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#83CD20'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = '#034833'}
+                className="flex items-center bg-[#034833] space-x-2 px-6 py-3 rounded-full font-semibold text-white transition-colors duration-200 cursor-pointer hover:bg-[#83CD20]"
               >
                 <span>More Detail</span>
                 <svg 

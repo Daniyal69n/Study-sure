@@ -74,13 +74,13 @@ const FAQ = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-[262px]">
-        {/* Content section - Image on left, FAQ content on right */}
+        {/* Content section - Image on left (hidden on mobile), FAQ content on right */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">
-          {/* Image section - moved to left */}
-          <div className="w-full lg:w-1/2 lg:pr-8 mb-0 lg:mb-0">
+          {/* Image section - hidden on mobile, visible on desktop */}
+          <div className="hidden lg:block w-full lg:w-1/2 lg:pr-8 mb-0 lg:mb-0">
             <div className="relative w-full max-w-[585px] mx-auto lg:mx-0">
               <img 
-                src="/Faq/girl.png" 
+                src="/faq/girl.png" 
                 alt="Study Abroad FAQ" 
                 width="585" 
                 height="776"
@@ -89,14 +89,14 @@ const FAQ = () => {
             </div>
           </div>
           
-          {/* FAQ content section - moved to right */}
+          {/* FAQ content section - full width on mobile, half width on desktop */}
           <div className="w-full lg:w-1/2 lg:pl-8">
             {/* Header section */}
             <div className="flex flex-col mb-2">
               <h3 
                 className="text-[#034833] mb-4"
                 style={{
-                  fontSize: '24px',
+                  fontSize: 'clamp(18px, 4vw, 24px)',
                   lineHeight: '14px',
                   fontWeight: '700',
                   letterSpacing: '1.4px'
@@ -107,8 +107,8 @@ const FAQ = () => {
               <h2 
                 className="text-[#034833] mb-8"
                 style={{
-                  fontSize: '50px',
-                  lineHeight: '60px',
+                  fontSize: 'clamp(32px, 8vw, 50px)',
+                  lineHeight: 'clamp(38px, 9vw, 60px)',
                   fontWeight: '700',
                   letterSpacing: 'normal'
                 }}

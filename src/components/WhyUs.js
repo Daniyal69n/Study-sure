@@ -214,10 +214,7 @@ const WhyUs = () => {
             {/* CTA Buttons */}
             <div className="pt-4 flex items-center gap-6">
               <button
-                className="flex items-center space-x-2 px-6 py-3 rounded-full font-semibold text-white transition-colors duration-200"
-                style={{ backgroundColor: "#034833" }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#83CD20")}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#034833")}
+                className="flex items-center bg-[#034833] space-x-2 px-6 py-3 rounded-full font-semibold text-white transition-colors duration-200 cursor-pointer hover:bg-[#83CD20]"
               >
                 <span>Learn More</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

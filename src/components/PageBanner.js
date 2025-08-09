@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PageBanner = ({ title, breadcrumb, backgroundImage = '/countries/background.png' }) => {
+const PageBanner = ({ title, breadcrumb, backgroundImage = '/banner-default.png' }) => {
   return (
     <div className="relative h-96 w-full overflow-hidden">
       {/* Background Image */}

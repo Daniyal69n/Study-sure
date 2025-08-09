@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 const OurServices = () => {
   const services = [
@@ -126,7 +127,7 @@ const OurServices = () => {
           {services.map((service) => (
             <div 
               key={service.id}
-              className="relative rounded-2xl overflow-hidden group cursor-pointer bg-cover bg-center transition-all duration-300 hover:transform hover:scale-105"
+              className="relative rounded-2xl overflow-hidden group cursor-pointer bg-cover bg-center transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl"
               style={{ 
                 height: "300px",
                 backgroundImage: `url(${service.image})`,
@@ -142,9 +143,11 @@ const OurServices = () => {
                     className="w-14 h-14 rounded-full flex items-center justify-center"
                     style={{ backgroundColor: "#034833" }}
                   >
-                    <img 
+                    <Image 
                       src={service.icon} 
                       alt="Service Icon" 
+                      width={28}
+                      height={28}
                       className="w-7 h-7"
                       style={{ filter: 'brightness(0) invert(1)' }}
                     />
@@ -170,9 +173,11 @@ const OurServices = () => {
                   className="w-14 h-14 rounded-full flex items-center justify-center"
                   style={{ backgroundColor: "#034833" }}
                 >
-                  <img 
+                  <Image 
                     src={service.icon} 
                     alt="Service Icon" 
+                    width={28}
+                    height={28}
                     className="w-7 h-7"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
@@ -204,12 +209,9 @@ const OurServices = () => {
                 </p>
                 
                 <button 
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-opacity-90 hover:transform hover:scale-105"
+                  className="flex items-center bg-[#034833] gap-2 px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200 cursor-pointer hover:bg-[#83CD20]"
                   style={{ 
-                    backgroundColor: "#83CD20",
-                    color: "white",
-                    fontSize: "13px",
-                    fontWeight: "600"
+                    fontSize: "13px"
                   }}
                 >
                   <span>Learn More</span>

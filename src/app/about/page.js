@@ -128,12 +128,7 @@ const AboutUsSection = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="pt-4">
-            <button className="bg-[#83CD20] hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
-              Start Your Journey Today
-            </button>
-          </div>
+          
         </div>
       </div>
       </section>
@@ -161,7 +156,7 @@ const AboutUsSection = () => {
                 <p className="text-white/90 text-lg leading-relaxed mb-6">
                   Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum has been the industry's standard dummy
                 </p>
-                <button className="bg-[#83CD20] hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <button className="bg-[#83CD20] hover:bg-green-600 cursor-pointer text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
                   Contact us
                 </button>
               </div>
