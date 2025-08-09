@@ -1,9 +1,10 @@
 "use client"
 import React from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 z-50 w-full bg-transparent" style={{ padding: '15px' }}>
+    <div className="fixed top-0 z-50 w-full bg-transparent" style={{ padding: '15px' }}>
       <nav className="bg-white shadow-2xl rounded-full w-full">
         <div className="px-4">
           <div className="flex justify-between items-center h-16">
@@ -14,7 +15,7 @@ const Navbar = () => {
                 alt="StudySure Logo" 
                 className="h-12 w-12"
               />
-              <div className="text-2xl font-bold" style={{ color: '#034833' }}>
+              <div className="text-2xl font-bold font-plus-jakarta-sans" style={{ color: '#034833' }}>
                 StudySure
               </div>
             </div>
@@ -22,42 +23,42 @@ const Navbar = () => {
             {/* Navigation Links - Centered */}
             <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex">
               <div className="flex items-baseline space-x-4">
-                <a 
-                  href="#" 
-                  className="px-3 py-2 text-base font-bold transition-colors duration-200"
+                <Link 
+                  href="/" 
+                  className="px-3 py-2 text-base font-bold font-plus-jakarta-sans transition-colors duration-200"
                   style={{ color: '#034833' }}
                   onMouseEnter={(e) => e.target.style.color = '#83CD20'}
                   onMouseLeave={(e) => e.target.style.color = '#034833'}
                 >
                   Home
-                </a>
-                <a 
-                  href="#" 
-                  className="px-3 py-2 text-base font-bold transition-colors duration-200"
+                </Link>
+                <Link 
+                  href="/destinations" 
+                  className="px-3 py-2 text-base font-bold font-plus-jakarta-sans transition-colors duration-200"
                   style={{ color: '#034833' }}
                   onMouseEnter={(e) => e.target.style.color = '#83CD20'}
                   onMouseLeave={(e) => e.target.style.color = '#034833'}
                 >
-                  Services
-                </a>
-                <a 
-                  href="#" 
-                  className="px-3 py-2 text-base font-bold transition-colors duration-200"
+                  Destinations
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="px-3 py-2 text-base font-bold font-plus-jakarta-sans transition-colors duration-200"
                   style={{ color: '#034833' }}
                   onMouseEnter={(e) => e.target.style.color = '#83CD20'}
                   onMouseLeave={(e) => e.target.style.color = '#034833'}
                 >
                   About
-                </a>
-                <a 
-                  href="#" 
-                  className="px-3 py-2 text-base font-bold transition-colors duration-200"
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="px-3 py-2 text-base font-bold font-plus-jakarta-sans transition-colors duration-200"
                   style={{ color: '#034833' }}
                   onMouseEnter={(e) => e.target.style.color = '#83CD20'}
                   onMouseLeave={(e) => e.target.style.color = '#034833'}
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
             

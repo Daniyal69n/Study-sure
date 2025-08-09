@@ -1,14 +1,55 @@
 "use client"
 import React, { useState } from 'react';
-import { Phone, Clock, MapPin, Mail, Send } from 'lucide-react';
+import { Phone, Clock, MapPin, Mail, Send, User, Globe, Calendar } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    email: '',
+    name: '',
     phone: '',
-    address: '',
+    studyDestination: '',
+    studyTimeline: '',
     message: ''
   });
+
+  // Generate study timeline options (current month to July 2028)
+  const generateTimelineOptions = () => {
+    const options = [];
+    const currentDate = new Date();
+    const endDate = new Date(2028, 6); // July 2028 (month is 0-indexed)
+    
+    const currentMonth = new Date(currentDate.getFullYear(), currentDate.getMonth());
+    
+    while (currentMonth <= endDate) {
+      const monthName = currentMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      options.push({
+        value: monthName,
+        label: monthName
+      });
+      currentMonth.setMonth(currentMonth.getMonth() + 1);
+    }
+    
+    return options;
+  };
+
+  const timelineOptions = generateTimelineOptions();
+
+  const studyDestinations = [
+    'United States',
+    'United Kingdom',
+    'Canada',
+    'Australia',
+    'Germany',
+    'France',
+    'Turkey',
+    'China',
+    'Dubai, UAE',
+    'Italy',
+    'Belarus',
+    'Hungary',
+    'Georgia',
+    'Cyprus',
+    'Other'
+  ];
 
   const handleChange = (e) => {
     setFormData({
@@ -31,25 +72,25 @@ const Contact = () => {
           {/* Contact Form Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="space-y-6">
-              {/* Email and Phone Row */}
+              {/* Name and Phone Row */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="relative">
-                  <label htmlFor="email" className="block text-base font-normal leading-[30px] tracking-normal text-[#034833] mb-2">
-                    Your Email
+                  <label htmlFor="name" className="block text-base font-normal leading-[30px] tracking-normal text-[#034833] mb-2">
+                    Your Name
                   </label>
                   <div className="relative">
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
-                      placeholder="Your Email"
+                      placeholder="Your Name"
                       className="w-full px-4 py-4 pr-12 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 outline-none"
                       required
                     />
                     <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                      <Mail className="w-5 h-5 text-[#034833]" />
+                      <User className="w-5 h-5 text-[#034833]" />
                     </div>
                   </div>
                 </div>
@@ -76,24 +117,56 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Address */}
+              {/* Study Destination */}
               <div className="relative">
-                <label htmlFor="address" className="block text-base font-normal leading-[30px] tracking-normal text-[#034833] mb-2">
-                  Your Address
+                <label htmlFor="studyDestination" className="block text-base font-normal leading-[30px] tracking-normal text-[#034833] mb-2">
+                  Your Preferred Study Destination *
                 </label>
                 <div className="relative">
-                  <input
-                    type="text"
-                    id="address"
-                    name="address"
-                    value={formData.address}
+                  <select
+                    id="studyDestination"
+                    name="studyDestination"
+                    value={formData.studyDestination}
                     onChange={handleChange}
-                    placeholder="Your Address"
-                    className="w-full px-4 py-4 pr-12 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 outline-none"
+                    className="w-full px-4 py-4 pr-12 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 outline-none appearance-none bg-white"
                     required
-                  />
+                  >
+                    <option value="">Select Study Destination</option>
+                    {studyDestinations.map((destination) => (
+                      <option key={destination} value={destination}>
+                        {destination}
+                      </option>
+                    ))}
+                  </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                    <MapPin className="w-5 h-5 text-[#034833]" />
+                    <Globe className="w-5 h-5 text-[#034833]" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Study Timeline */}
+              <div className="relative">
+                <label htmlFor="studyTimeline" className="block text-base font-normal leading-[30px] tracking-normal text-[#034833] mb-2">
+                  When do you plan to study? *
+                </label>
+                <div className="relative">
+                  <select
+                    id="studyTimeline"
+                    name="studyTimeline"
+                    value={formData.studyTimeline}
+                    onChange={handleChange}
+                    className="w-full px-4 py-4 pr-12 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 outline-none appearance-none bg-white"
+                    required
+                  >
+                    <option value="">Select Timeline</option>
+                    {timelineOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                    <Calendar className="w-5 h-5 text-[#034833]" />
                   </div>
                 </div>
               </div>

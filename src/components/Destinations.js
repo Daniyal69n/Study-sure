@@ -8,14 +8,17 @@ const Destinations = () => {
 
   // Sample destination data - you can update image paths as needed
   const destinations = [
-    { id: 1, name: 'UK', image: '/destinations/usa.jpg', flag: '/destinations/flag1.png' },
-    { id: 2, name: 'Europe', image: '/destinations/uk-img.jpg', flag: '/destinations/flag2.png' },
-    { id: 3, name: 'USA', image: '/destinations/can.jpg', flag: '/destinations/flag3.png' },
-    { id: 4, name: 'Canada', image: '/destinations/australia.jpg', flag: '/destinations/flag4.png' },
-    { id: 5, name: 'Australia', image: '/destinations/germany.jpg', flag: '/destinations/flag5.png' },
-    { id: 6, name: 'Turkey', image: '/destinations/usa.jpg', flag: '/destinations/flag1.png' },
-    { id: 7, name: 'China', image: '/destinations/uk-img.jpg', flag: '/destinations/flag2.png' },
-    { id: 8, name: 'Dubai', image: '/destinations/can.jpg', flag: '/destinations/flag3.png' },
+    { id: 1, name: 'UK', image: '/destinations/usa.jpg', flag: '/flag/uk.png' },
+    { id: 2, name: 'Germany', image: '/destinations/germany.jpg', flag: '/flag/germany.png' },
+    { id: 3, name: 'France', image: '/destinations/france.jpg', flag: '/flag/france.png' },
+    { id: 4, name: 'Italy', image: '/destinations/italy.jpg', flag: '/flag/italy.jpg' },
+    { id: 5, name: 'Denmark', image: '/destinations/denmark.jpg', flag: '/flag/denmark.jpg' },
+    { id: 6, name: 'USA', image: '/destinations/usa.jpg', flag: '/flag/usa.png' },
+    { id: 7, name: 'Canada', image: '/destinations/canada.jpg', flag: '/flag/canada.jpg' },
+    { id: 8, name: 'Australia', image: '/destinations/australia.jpg', flag: '/flag/australia.png' },
+    { id: 9, name: 'Turkey', image: '/destinations/turkey.jpg', flag: '/flag/turkey.png' },
+    { id: 10, name: 'China', image: '/destinations/china.jpg', flag: '/flag/china.webp' },
+    { id: 11, name: 'Dubai', image: '/destinations/dubai.jpg', flag: '/flag/dubai.jpg' },
   ];
 
   const cardsPerPage = 6;
